@@ -58,14 +58,14 @@ public class Part03StepVerifierTest {
 
 	@Test
 	public void count() {
-		workshop.expect10Elements(Flux.interval(Duration.ofSeconds(1)).take(10));
+		workshop.expect10Elements(Flux.interval(Duration.ofSeconds(1)).take(10).log());
 	}
 
 //========================================================================================
 
 	@Test
 	public void countWithVirtualTime() {
-		workshop.expect3600Elements(() -> Flux.interval(Duration.ofSeconds(1)).take(3600));
+		workshop.expect3600Elements(() -> Flux.interval(Duration.ofSeconds(1)).take(3600).log());
 	}
 
 }

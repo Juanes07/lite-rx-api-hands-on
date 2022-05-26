@@ -13,11 +13,14 @@ public class User {
 
 	private final String lastname;
 
+
+
 	public User(String username, String firstname, String lastname) {
 		this.username = username;
 		this.firstname = firstname;
 		this.lastname = lastname;
 	}
+
 
 	public String getUsername() {
 		return username;
